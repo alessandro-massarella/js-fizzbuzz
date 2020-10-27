@@ -12,10 +12,13 @@ var numeri = new Array(100);
 // inserisco i numeri nell'array
 for (var i = 0; i < 100; i++) {
   numeri[i] = i + 1;
-  if (numeri[i] % 3 === 0) {
+
+  if ((numeri[i] % 3 === 0) && (numeri[i] % 5 === 0)) {
+      document.getElementById('lista').innerHTML += ('<li>') + numeri[i] + (' FizzBuzz') + ('</li>');
+  } else if (numeri[i] % 3 === 0) {
       document.getElementById('lista').innerHTML += ('<li>') + numeri[i] + (' Fizz') + ('</li>');
   } else if (numeri[i] % 5 === 0) {
-          document.getElementById('lista').innerHTML += ('<li>') + numeri[i] + (' Buzz') + ('</li>');
+      document.getElementById('lista').innerHTML += ('<li>') + numeri[i] + (' Buzz') + ('</li>');
   } else
-  document.getElementById('lista').innerHTML += ('<li>') + numeri[i] + ('</li>');
+      document.getElementById('lista').innerHTML += ('<li>') + numeri[i] + ('</li>');
 }
